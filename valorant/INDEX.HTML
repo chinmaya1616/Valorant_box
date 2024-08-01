@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube with Valorant Animation Background</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="background">
+        <video autoplay muted loop class="background-video">
+            <source src="Y2meta.app-�� SKY _ Valorant Edit (4K)-(1080p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+<body>
+    <div class="cube">
+        <div class="face front">
+            <img src="VIPER.webp" alt="Front Image" class="face-image"/>
+            <div class="text">VIPER</div>
+        </div>
+        <div class="face back">
+            <img src="neon.jpg" alt="Back Image" class="face-image"/>
+            <div class="text">NEON</div>
+        </div>
+        <div class="face left">
+            <img src="fade.jpeg" alt="Left Image" class="face-image"/>
+            <div class="text">FADE</div>
+        </div>
+        <div class="face right">
+            <img src="killjoy.jpg" alt="Right Image" class="face-image"/>
+            <div class="text">KILLJOY</div>
+        </div>
+        <div class="face top">
+            <img src="sage.webp" alt="Top Image" class="face-image"/>
+            <div class="text">SAGE</div>
+        </div>
+        <div class="face bottom">
+            <img src="deadlock.webp" alt="Bottom Image" class="face-image"/>
+            <div class="text">DEADLOCK</div>
+        </div>
+    </div>
+
+
+     <!-- Audio Element -->
+     <audio class="background-audio" preload="auto">
+        <source src="SKY  Valorant Edit (4K).mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Play Button (for testing) -->
+    <button id="play-audio" style="display:none;">Play Audio</button> <!-- Hidden by default -->
+
+    <script>
+        // Automatically play audio if possible
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.querySelector('.background-audio');
+            const playButton = document.getElementById('play-audio');
+
+            // Attempt to play audio
+            audio.play().catch(error => {
+                console.log('Autoplay blocked. User interaction required.');
+                playButton.style.display = 'block'; // Show play button if autoplay is blocked
+            });
+
+            // Set up play button
+            playButton.addEventListener('click', function() {
+                audio.play().catch(error => {
+                    console.error('Audio playback failed:', error);
+                });
+                playButton.style.display = 'none'; // Hide play button after successful play
+            });
+        });
+    </script>
+
+
+
+</body>
+</body>
+</html>
